@@ -1,0 +1,26 @@
+SEED: 2023
+
+DATASET:
+  datadir: /datasets
+
+OPTIMIZER:
+  opt_name: SGD
+  params:
+    lr: 0.01
+    weight_decay: 0.0001
+
+TRAINING:
+  batch_size: 128
+  test_batch_size: 256
+  clean_epochs: 100  # default:100    10 for fast pre-experimemt
+  backdoor_epochs: 100
+  log_interval: 1
+  use_scheduler: true
+  use_wandb: true
+
+RESULT:
+  savedir: './saved_model'
+
+BACKDOOR:
+  trigger_type: "BadNet_Patch"
+#  trigger_type: "BadNet"
